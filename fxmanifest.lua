@@ -14,6 +14,11 @@ client_scripts {
 	'a*.lua'
 }
 
+ui_page 'index.html'
+
+files {
+	'index.html'
+}
 dependencies {
 	'sy_core'
 }

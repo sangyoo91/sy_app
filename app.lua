@@ -53,3 +53,8 @@ Citizen.CreateThread(function()
 
   end)
 end)
+
+
+RegisterNUICallback('callback', function()
+  TriggerServerEvent('sy_app:_dev')
+end)
