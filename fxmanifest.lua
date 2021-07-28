@@ -17,7 +17,8 @@ client_scripts {
 ui_page 'index.html'
 
 files {
-	'index.html'
+	'index.html',
+	'axios.min.js'
 }
 dependencies {
 	'sy_core'

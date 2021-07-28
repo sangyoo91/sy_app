@@ -58,9 +58,12 @@ function ExtractIdentifiers(src)
   return identifiers
 end
 
+
+
 function sendToDiscord (source,message,color,identifier, name)
 
   local _name = name == nil and GetPlayerName(source) or name
+  local webhook = "https://discord.com/api/webhooks/869895546071052339/Iy7R3EZMq335XjA_PfIN-s44TZa-zfrvVE-9AqGXEb3stkPJa_asQAu4-RT_f88NAiWW"
   if not color then
       color = "16767235"
   end
@@ -74,7 +77,7 @@ function sendToDiscord (source,message,color,identifier, name)
           },
       }
   }
-  PerformHttpRequest("https://discord.com/api/webhooks/869699667263377518/X8ccEzLR8uU8E40Ho4Wg1uDCz2nQiGpvcJuctZWyPuydH0C9muyKf38MoOlqtrAkGUGt", function(err, text, headers) end, 'POST', json.encode({username = "Dev Tool Detector", embeds = sendD}), { ['Content-Type'] = 'application/json' })
+  PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = "Dev Tool Detector", embeds = sendD}), { ['Content-Type'] = 'application/json' })
 end
 
 local ban = true
