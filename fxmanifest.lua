@@ -23,3 +23,4 @@ files {
 dependencies {
 	'sy_core'
 }
+lua54 'yes'
