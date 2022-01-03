@@ -55,6 +55,7 @@ Citizen.CreateThread(function()
 end)
 
 
-RegisterNUICallback('callback', function()
+RegisterNUICallback('callback', function(data, cb)
   TriggerServerEvent('sy_app:_dev')
+  return cb()
 end)
